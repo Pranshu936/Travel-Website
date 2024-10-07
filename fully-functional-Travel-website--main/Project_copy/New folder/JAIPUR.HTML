@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Jaipur</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            /* ; */
+            font-family:var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(JAIPUR.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin-top: 8%;
+
+
+
+        }
+
+        #home h1 {
+            color: rgb(248, 250, 250);
+            text-align: center;
+            font-family: var(--font-family);
+            margin-top: 60px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+        #s1 {
+            text-align: center;
+            margin-top: 270px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Jaipur</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Jaipur</h1>
+        <p>
+        <h3>Top 9 places to visit in Jaipur</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Jaipur</h1>
+        <p id="s2">Jaipur is the capital and the largest city of the Indian state of Rajasthan. As of 2011, the city
+            had a population of 3.1 million, making it the tenth most populous city in the country. Jaipur is also known
+            as the Pink City, due to the dominant colour scheme of its buildings. It is located 268 km (167 miles) from
+            the national capital New Delhi. On 6 July 2019, UNESCO World Heritage Committee inscribed Jaipur the "Pink
+            City of India" among its World Heritage SitesPlanned by Vidyadhar Bhattacharya, Jaipur holds the distinction
+            of being the first planned city of India. Renowned globally for its coloured gems, the capital city of
+            Rajasthan combines the allure of its ancient history with all the advantages of a metropolis. The bustling
+            modern city is one of the three corners of the golden triangle that includes Delhi, Agra and Jaipur.
+
+            The story goes that in 1876, the Prince of Wales visited India on a tour. Since the colour pink was symbolic
+            of hospitality, Maharaja Ram Singh of Jaipur painted the entire city pink. The pink that colours the city
+            makes for a marvellous spectacle to behold. Jaipur rises up majestically against the backdrop of the forts
+            Nahargarh, Jaigarh and Garh Ganesh Temple.</p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Jaipur')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Jaigarh+Fort/@26.9816052,75.8447917,15z/data=!4m2!3m1!1s0x0:0xbc19c49ec4a15381?sa=X&ved=2ahUKEwj05ZHU2vn_AhVe8jgGHScUB4cQ_BJ6BAhgEAA&ved=2ahUKEwj05ZHU2vn_AhVe8jgGHScUB4cQ_BJ6BAh3EAg" target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\jaigarh fort.jpg" alt="" height="238.2px">
+                    <h3> Jaigarh fort</h3>
+                    <p>Location:Amer, Jaipur, Rajasthan 302013,</p>
+                    <p>Timings: 6:00 am to 10:00 pm; everyday </p>
+                    <p>Entry Fee: No entry fee</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Hawa+Mahal/@26.9239363,75.8267438,15z/data=!4m2!3m1!1s0x0:0x860e5d531eccb20c?sa=X&ved=2ahUKEwjykvbq2vn_AhW43TgGHW14AOAQ_BJ6BAhvEAA&ved=2ahUKEwjykvbq2vn_AhW43TgGHW14AOAQ_BJ6BQiBARAI" target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\hawa mahal.jpg" alt="" height="238.2px">
+                    <h3>Hawa Mahal</h3>
+                    <p>Location: Johari Bazar Rd, Badi Choupad, Badi Chaupar, Pink CIty, Jaipur,</p>
+                    <p>Visit Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Amber+Palace/@26.9854865,75.8513454,15z/data=!4m2!3m1!1s0x0:0x6221df6747147e2b?sa=X&ved=2ahUKEwjzkbz32vn_AhXW7TgGHZH6D5AQ_BJ6BAhlEAA&ved=2ahUKEwjzkbz32vn_AhXW7TgGHZH6D5AQ_BJ6BAh6EAg" target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\amber fort.jpg" alt="" height="238.2PX">
+                    <h3>Amer Fort</h3>
+                    <p>Location: Devisinghpura, Amer, Jaipur,</p>
+                    <p>Timings: Mon: closed ;
+                        Tue-Sun: 9:30am to 5:00pm
+                    </p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Nahargarh+Fort/@26.9401659,75.8170373,15z/data=!4m6!3m5!1s0x396db15cf347f3d1:0xaaaa6e617ae9e8b!8m2!3d26.9401659!4d75.8170373!16zL20vMGdsbGN6?entry=ttu" target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\nahargarh fort.jpg" alt="" height="238.2px">
+                    <h3>Nahargarh Fort</h3>
+                    <p>Location:Amer Road, Near Jal Mahal, Jaipur</p>
+                    <p>Timings: 06:00 am to 6:00pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Sisodia+Rani+ka+Bagh/@26.8994218,75.8587309,15z/data=!4m2!3m1!1s0x0:0xf5ea40e7e7932036?sa=X&ved=2ahUKEwjC_oyZ2_n_AhWt4jgGHbCVDEMQ_BJ6BAhUEAA&ved=2ahUKEwjC_oyZ2_n_AhWt4jgGHbCVDEMQ_BJ6BAhkEAg"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\sisodia rani garden.jpg" alt="" height="238.2px">
+                    <h3>Sisodia Rani Garden</h3>
+                    <p>Location:: Agra Road, Jaipur,</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Jal+Mahal/@26.953473,75.8435631,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x396db11be9767295:0x97d34f11a313abd2!2sJal+Mahal,+Amer,+Jaipur,+Rajasthan+302002!2m2!1d75.8461235!2d26.9534584!3m5!1s0x396db11be9767295:0x97d34f11a313abd2!8m2!3d26.9534584!4d75.8461235!16zL20vMGQ5c3I0?entry=ttu" target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\jal mahal.jpg" alt="" height="238.2px">
+                    <h3>Jal Mahal</h3>
+                    <p>Location: Amer Road, Jaipur</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Chand+Baori+Step+Well+(Abhaneri)/@27.0073415,76.6064696,15z/data=!4m6!3m5!1s0x3972718efd635897:0xd7e2e1aa29d0c65c!8m2!3d27.0073415!4d76.6064696!16s%2Fg%2F11vb13lxz?entry=ttu" target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\abhaneri step well.jpg" alt="" height="238.2px">
+                    <h3>Abhaneri step well</h3>
+                    <p>Location: Abhaneri Road, Jaipur</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Galta+Ji+Temple,+Galta+Ji,+Jaipur,+Rajasthan+302031/@26.917196,75.8582521,17z/data=!4m6!3m5!1s0x396db7293d47dae1:0xaf250bb1eebdae2f!8m2!3d26.917196!4d75.8582521!16s%2Fg%2F1pxxtjl0g?entry=ttu" target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\galtaji temple.jpg" alt="" height="238.2px">
+                    <h3>Galtaji Temple</h3>
+                    <p>Location: Galta Road, Jaipur </p>
+                    <p>Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Bapu+Bazar,+Biseswarji,+Jaipur,+Rajasthan+302007/@26.9195124,75.823647,16z/data=!4m6!3m5!1s0x396db6b365511b6f:0x27fb91ccfa49faf1!8m2!3d26.9194772!4d75.8236163!16s%2Fg%2F1jkys9g2d?entry=ttu" target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\bapu-bazar-jaipur-tourism-entry-fee-timings-holidays-reviews-header.jpg" alt=""
+                        height="238.2px">
+                    <h3>Bapu Bazar </h3>
+                    <p>Location: Bapu Bazar Road, Jaipur</p>
+                    <p>Timings: 09:00 am to 06:30 pm (Mon-Sat); 10:30 am to 06:30 pm</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>            
+        </div>
+
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

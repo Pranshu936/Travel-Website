@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Agra</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            ;
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(Agra1.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin-top: 0%;
+
+
+        }
+
+        #home h1 {
+            color: rgb(248, 250, 250);
+            text-align: center;
+            font-family: var(--font-family);
+            margin-top: 60px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Agra</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Agra</h1>
+        <p>
+        <h3>Top 9 places to visit in Agra</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Agra</h1>
+        <p id="s2">Agra - the city of Taj Mahal - is widely recognised as one of the most artistically inspiring cities
+            globally. What makes this city a culturally rich destination is a total of three UNESCO World Heritage
+            sites: the Taj Mahal, the Agra Fort and Fatehpur Sikri. Thousands of domestic as well as foreign tourists
+            flock to this city annually to view these wonders along with the other plentiful attractions present here.
+            Along with Delhi and Jaipur, Agra is a part of the Golden Triangle tourist circuit.
+            <br>
+            <br>
+            The city, situated on the banks of the River Yamuna in the north Indian state of Uttar Pradesh, was chosen
+            by Mughal Emperor Akbar as his capital.The city with its historically rich past, abundantly clear from the
+            many splendid monuments from the erstwhile past in and around the city, is a tourist’s delight. We find the
+            earliest mention about Agra from the Mahabharata where it is referred as Agrevana meaning ‘the border of the
+            forest’. And sources prior to the Mahabharata refer to Agra as Arya Griha or the abode of the Aryans. Agra
+            was referred by its modern name for the first time by Ptolemy, the famous Greek astronomer and geographer.
+
+        </p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Agra')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Red+fort+of+Agra/@27.1796984,78.0212197,15z/data=!4m2!3m1!1s0x0:0xa2a244a7592c9996?sa=X&ved=2ahUKEwj6o7-T5_n_AhWG4DgGHRvQBHMQ_BJ6BAhvEAA&ved=2ahUKEwj6o7-T5_n_AhWG4DgGHRvQBHMQ_BJ6BAh6EAg"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\Agra Red Fort.jpg" alt="" height=238.2px>
+                    <h3> Agra Red Fort</h3>
+                    <p>Location: Agra Fort, Rakabganj, Agra</p>
+                    <p>Timings: 6 AM – 6 PM</p>
+                    <p>Entry Fee: Rs. 20 for Indian citizens and Rs. 300 for foreigners</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Fatehpur+Sikri,+Uttar+Pradesh+283110/@27.0944338,77.6735415,14z/data=!3m1!4b1!4m6!3m5!1s0x397391584a53798d:0x893d46790c1fb40!8m2!3d27.0945291!4d77.6679292!16zL20vMDF2cnp3?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\Fatehpur Sikri.jpg" alt="" height=238.2px>
+                    <h3>Fatehpur Sikri</h3>
+                    <p>Location: Fatehpur Sikri, Agra</p>
+                    <p>Visit Timings: 6:00 AM to 6:00 PM</p>
+                    <p>Entry Fee: Rs. 20 for Indian citizens, Rs. 550 for foreigners and no fee for children under 15
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Shahi+Jama+Masjid/@27.1820661,78.0139878,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x39747770add52adf:0x5cf586746adfb8b2!2s52J8%2BRF9,+Subash+Bazar,+Kinari+Bazar,+Hing+ki+Mandi,+Mantola,+Agra,+Uttar+Pradesh+282003!2m2!1d78.0165627!2d27.1820614!3m5!1s0x39747770add52adf:0x5cf586746adfb8b2!8m2!3d27.1820614!4d78.0165627!16s%2Fg%2F11gmdmw__f?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\Jama Masjid.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3> Jama Masjid</h3>
+                    <p>Location: Jama Masjid Rd, Subash Bazar, Kinari Bazar, Hing ki Mandi, Mantola, Agra</p>
+                    <p>Timings: 8 AM – 6 PM</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Sikandra+Fort/@27.2210058,77.9504244,15z/data=!4m2!3m1!1s0x0:0xd2f1b5d6d032ba2?sa=X&ved=2ahUKEwjNk9PE5_n_AhWSHXAKHekzBUgQ_BJ6BAhsEAA&ved=2ahUKEwjNk9PE5_n_AhWSHXAKHekzBUgQ_BJ6BAh2EAg"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\Sikandra Fort.jpg" alt="" height=238.2px>
+                    <h3>Sikandra Fort</h3>
+                    <p>Location: Tomb of Akbar The Great Area, Sikandra, Agra</p>
+                    <p>Timings: 8 AM – 6 PM</p>
+                    <p>Entry Fee: Rs. 15 for Indian citizens and Rs. 110 for foreigners</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Itmad-ud-Daula/@27.1928873,78.0309808,15z/data=!4m2!3m1!1s0x0:0x13f63c6b9f4ac458?sa=X&ved=2ahUKEwi7-4LH6Pn_AhUrZPUHHfGKCdgQ_BJ6BAhqEAA&ved=2ahUKEwi7-4LH6Pn_AhUrZPUHHfGKCdgQ_BJ6BQiBARAI"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\Itmad-Ud-Daulah Tomb.jpg" alt="" height=238.2px>
+                    <h3>Itmad-Ud-Daulah’s Tomb</h3>
+                    <p>Location: Moti Bagh, Agra</p>
+                    <p>Timings: 8 AM – 12 AM</p>
+                    <p>Entry Fee: Rs. 20 for Indian citizens and Rs. 210 for foreigners</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Mehtabh+Bagh/@27.1800637,78.0414188,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x397471a25a6f8fa7:0x261c801dcf1a786!2sMehtabh+Bagh!8m2!3d27.1800625!4d78.0420625!16s%2Fg%2F11twq311nw!3m5!1s0x397471a25a6f8fa7:0x261c801dcf1a786!8m2!3d27.1800625!4d78.0420625!16s%2Fg%2F11twq311nw?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\Mehtab Bagh.jpeg" alt="" height=238.2px>
+                    <h3>Mehtab Bagh</h3>
+                    <p>Location: Near Taj Mahal, Dharmapuri, Forest Colony, Nagla Devjit, Agra</p>
+                    <p>Timings: 6 AM – 9 PM</p>
+                    <p>Entry Fee: Rs. 15 for Indian citizens and Rs. 200 for foreigners</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Taj+Mahal/@27.1751495,78.0395673,17z/data=!3m1!4b1!4m6!3m5!1s0x39747121d702ff6d:0xdd2ae4803f767dde!8m2!3d27.1751448!4d78.0421422!16zL20vMGw4Y2I?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\Taj Mahal.jpg" alt="" height=238.2px>
+                    <h3>Taj Mahal</h3>
+                    <p>Location: Dharmapuri, Forest Colony, Tajganj, Agra</p>
+                    <p>Timings: 06:00 AM to 06:30 PM, Fridays closed</p>
+                    <p>Entry Fee: Rs. 50 for Indian citizens, Rs. 1100 for foreigners and no fee for children under 15
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Tomb+of+Akbar+the+Great/@27.2205556,77.9505086,15z/data=!4m2!3m1!1s0x0:0x2ecbe9a4b4d33615?sa=X&ved=2ahUKEwixsO3w6Pn_AhW4QPUHHYDtA8oQ_BJ6BAhoEAA&ved=2ahUKEwixsO3w6Pn_AhW4QPUHHYDtA8oQ_BJ6BAh4EAg"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\Akbar Tomb.jpg" alt="" height=238.2px>
+                    <h3>Akbar’s Tomb</h3>
+                    <p>Location: Tomb of Akbar The Great Area, Sikandra, Agra</p>
+                    <p>Timings: 6 AM – 6 PM</p>
+                    <p>Entry Fee: Rs. 5 for Indian citizens and Rs. 100 for foreigners
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Diwan-e-khas/@27.1785104,78.0233393,15z/data=!4m6!3m5!1s0x39747177871e70b1:0xf7c5093ee0be728a!8m2!3d27.1785104!4d78.0233393!16s%2Fg%2F11f74kjwb4?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-9">
+                    <img src="../cities\Khas Mahal.jpg" alt="" height=238.2px>
+                    <h3>Khas Mahal</h3>
+                    <p>Location: Agra Fort, Rakabganj, Agra</p>
+                    <p>Timings: 6 AM – 6 PM</p>
+                    <p>Entry Fee: Rs. 40 for Indian citizens and Rs. 550 for foreigners
+                    </p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+                </p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

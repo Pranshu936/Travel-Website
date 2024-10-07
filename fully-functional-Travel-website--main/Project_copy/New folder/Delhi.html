@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Delhi</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            ;
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(delhi.jpg) no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin-top: 0%;
+
+
+        }
+
+        #home h1 {
+            color: rgb(248, 250, 250);
+            text-align: center;
+            font-family: var(--font-family);
+            margin-top: 60px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Delhi</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Delhi</h1>
+        <p>
+        <h3>Top 9 places to visit in Delhi</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Delhi</h1>
+        <p id="s2">Delhi is a full cultural experience you should not miss on. The abundance of talent in theatre,
+            literature, gastronomy and even art is truly impressive. You will have your fill of museums, old bazaars,
+            finest of restaurants, planetariums and knowledgeable heritage walks around the city. There is a lot you
+            will discover in this diverse city, if you keep an open mind.Best things about journeys are that sometimes
+            they bring in the unexpected. Touring around Delhi, you will find several amazing places nestled worthy of
+            your notice. You can steal some time off your itinerary and explore some of the areas just outside Delhi.
+            There are many spots fairly in your reach if you want to do a one-day trip away from Delhi.You can’t define
+            Delhi in just a few words. The city is too dynamic for that. It’s rich history saturated with old stories
+            reflects in beautiful heritage buildings tucked around the sprawling city. The dusty patina of the old
+            stonewalls gives a rumbling beauty to the city landscape and one can almost hear the sounds of the past
+            echoing.
+
+            This city is a haven for gourmets. Right from traditional Mughlai nooks tucked behind Jama Masjid to fancy
+            world class restaurants, Delhi has something for everyone. It’s vibrancy extends to it’s handlooms as well,
+            filling the noisy bustling bazaars with a colorful display of local merchandise. Delhi is an exotic vivid
+            destination deserving to be on your itinerary.</p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Delhi')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Qutab+Minar,+Seth+Sarai,+Mehrauli,+New+Delhi,+Delhi+110016/@28.5244946,77.1855177,15z/data=!4m6!3m5!1s0x390d1e065dc72379:0xf6e7259f610de1d7!8m2!3d28.5244946!4d77.1855177!16zL20vMDNjX2g4?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\qutub minar.jpg" alt="" height=238.2px>
+                    <h3>Qutub Minar</h3>
+                    <p>Location: Mehrauli, Delhi</p>
+                    <p>Timings: 7:00 am to 5:00 pm; every day </p>
+                    <p>Entry Fee: ₹30 for Indians; ₹500 for foreigners; free for children below 15 years</p>
+                    <p>Status: UNESCO World Heritage Site</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Gurudwara+Bangla+Sahib/@28.6345071,77.1984409,13.65z/data=!4m19!1m12!4m11!1m3!2m2!1d77.2351335!2d28.6280903!1m6!1m2!1s0x390cfd4c27bc01eb:0x70b3f3a386072328!2sHanuman+Road+Area,+Connaught+Place,+New+Delhi,+Delhi+110001!2m2!1d77.20973!2d28.628259!3m5!1s0x390cfd4c27bc01eb:0x70b3f3a386072328!8m2!3d28.628259!4d77.20973!16s%2Fg%2F1hc508_d8?hl=en&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\gurudwara bangla sahib.jpg" alt="" height=238.2px>
+                    <h3>Gurudwara Bangla Sahib</h3>
+                    <p>Location: Baba Kharak Singh Rd, Hanuman Road Area, Connaught Place, New Delhi </p>
+                    <p>Visit Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Gurudwara+Sis+Ganj+Sahib/@28.6559878,77.2325614,15z/data=!4m6!3m5!1s0x390cfd1baf5397b9:0x9d337afc1acad068!8m2!3d28.6559878!4d77.2325614!16s%2Fg%2F1jljyf3db?hl=en&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\gurudwara sis ganj sahib.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Gurudwara Sis Ganj Sahib</h3>
+                    <p>Location: Chandni Chowk, Delhi - 110006, Opposite Red Fort, Chatta Pratap</p>
+                    <p>Timings: 24:00hrs; </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/India+Gate/@28.612912,77.2295097,15z/data=!4m6!3m5!1s0x390ce2daa9eb4d0b:0x717971125923e5d!8m2!3d28.612912!4d77.2295097!16zL20vMDM1bWMz?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\India Gate.jpg" alt="" height=238.2px>
+                    <h3>India Gate</h3>
+                    <p>Location: Rajpath, India Gate, New Delhi, Delhi</p>
+                    <p>Timings: 24:00hrs; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Red+Fort/@28.6561639,77.2384454,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x390cfce26ec085ef:0x441e32f4fa5002fb!2sNetaji+Subhash+Marg,+Lal+Qila,+Chandni+Chowk,+New+Delhi,+Delhi+110006!2m2!1d77.2410203!2d28.6561592!3m5!1s0x390cfce26ec085ef:0x441e32f4fa5002fb!8m2!3d28.6561592!4d77.2410203!16zL20vMDVteXN2?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\red fort.jpg" alt="" height=238.2px>
+                    <h3>Red Fort</h3>
+                    <p>Location: Netaji Subhash Marg, Lal Qila, Chandni Chowk, New Delhi, Delhi </p>
+                    <p>Timings: 9.30 am to 4.30 pm(Tue-Sun), closed (Mon)</p>
+                    <p>Entry Fee: Indian -₹ 35 / Foreigner - ₹ 550</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Rashtrapati+Bhavan/@28.6143478,77.19943,15z/data=!4m2!3m1!1s0x0:0x83a25e55f0af1c82?sa=X&ved=2ahUKEwikp7ii2fn_AhWOA4gKHaBtDBYQ_BJ6BAhlEAA&hl=en&ved=2ahUKEwikp7ii2fn_AhWOA4gKHaBtDBYQ_BJ6BAh8EAg"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\rashtrapati bhavan.jpg" alt="" height=238.2px>
+                    <h3>Rashtrapati Bhavan</h3>
+                    <p>Location: Rashtrapati Bhawan, President's Estate, New Delhi, Delhi</p>
+                    <p>Timings: 9:00 am – 4:00 pm(Thur-Sun), closed(Mon-Wed) </p>
+                    <p>Entry Fee: ₹ 50 per person per Circuit (if less than 30 persons)
+                        ₹ 1200 for a group of 30 persons
+                        ₹ 1200 + ₹ 50 per additional visitor for a group of more than 30 persons</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Lotus+Temple/@28.553492,77.2588264,15z/data=!4m6!3m5!1s0x390ce3c16e028cd1:0x653beb1ee85ec67a!8m2!3d28.553492!4d77.2588264!16s%2Fm%2F03bx9s0?hl=en&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\lotus temple.jpg" alt="" height=238.2px>
+                    <h3>Lotus Temple</h3>
+                    <p>Location: Lotus Temple Rd, Bahapur, Shambhu Dayal Bagh, Kalkaji, New Delhi, Delhi</p>
+                    <p>Timings: 9:00 AM -5.30 PM; everyday</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Gandhi+Smriti+Museum/@28.6018839,77.2144057,15z/data=!4m2!3m1!1s0x0:0xf074d19eb4e1b40a?sa=X&ved=2ahUKEwjkov652fn_AhW1hMYKHa13B3sQ_BJ6BAhnEAA&hl=en&ved=2ahUKEwjkov652fn_AhW1hMYKHa13B3sQ_BJ6BQiEARAI"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\gandhi smriti.jpg" alt="" height=238.2px>
+                    <h3>Gandhi Smriti</h3>
+                    <p>Location: Infront of National Defence College, 5, Tees January Marg Near Birla House, New Delhi,
+                        Delhi </p>
+                    <p>Timings: 10:00 am – 5:00 pm(Tue-Sun),closed on Mon</p>
+                    <p>Entry Fee: No entry fee
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Raj+Ghat/@28.6406214,77.2495002,15z/data=!4m2!3m1!1s0x0:0x1a5978757d31b6ef?sa=X&ved=2ahUKEwiL8bbD2fn_AhWZ1GEKHdP2CRYQ_BJ6BAhmEAA&hl=en&ved=2ahUKEwiL8bbD2fn_AhWZ1GEKHdP2CRYQ_BJ6BAhrEAg"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\raj ghat.jpg" alt="" height=238.2px>
+                    <h3>Raj Ghat</h3>
+                    <p>Location: Behind Red Fort, New Delhi, Delhi</p>
+                    <p>Timings: 6:30 am – 6:00 pm;everyday</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>            
+        </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

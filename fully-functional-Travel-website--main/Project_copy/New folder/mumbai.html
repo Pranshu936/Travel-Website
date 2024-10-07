@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Mumbai</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+            --font-family: Times Now Roman;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(238, 227, 227);
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(mumbaii.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+
+        }
+
+        #home h1 {
+            color: rgb(238, 227, 227);
+            text-align: center;
+            font-family: var(--font-family);
+        }
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            position: relative;
+            left: 10rem;
+            top: 2rem;
+            width: 70rem;
+            text-align: justify;
+            
+        }
+        .weather{
+            font-family: 'Style Script', cursive;
+
+            width: 70rem;
+            position: relative;
+            left: 10rem;
+            top: 2rem;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        
+
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Mumbai</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Mumbai</h1>
+        <p>
+        <h3>Top 9 places to visit in Mumbai</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Mumbai</h1>
+        <p id="s2">Mumbai is a city of contrasts. Arguably India's most cosmopolitan city, it brims with gourmet
+            restaurants, five-star hotels, the fancy living quarters of Bollywood megastars and renowned attractions.
+            But remember: An estimated 20 million people call this bustling metropolis home, giving India's largest city
+            a distinctively chaotic, energized feel.
+
+            It's easy to experience India at its most authentic in Mumbai. You'll see Hindu devotees picking up garlands
+            from the massive flower market near Dadar railway station, "dabbawalas" (translated as people who carry
+            containers) delivering hundreds of thousands of freshly cooked lunches to the city's office workers from
+            Churchgate railway station, the swirling colors of the bustling "Thieves Market," and people of all walks of
+            life enjoying the sunset from the sugary sand at Marine Drive Chowpatty. Mumbai is equal parts overwhelming
+            and inspiring, and you'll never forget your first visit to this city.
+
+            Tourists are spoiled for choice when it comes to things to do in Mumbai. Plan your adventure in this
+            incredible city with our list of the top tourist attractions in Mumbai.</p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Mumbai')</script>
+    </div>
+    
+    
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Marine+Dr,+Mumbai/@18.9432111,72.8229983,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1e25ee8439d:0x5acd924f2726ad2b!8m2!3d18.9432111!4d72.8229983!16zL20vMDM1Nnls?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\marine drive.jpg" alt="" height=238.2px>
+                    <h3> Marine Drive</h3>
+                    <p>Location: South Mumbai,near Churchgate</p>
+                    <p>Timings: 24:00hrs; </p>
+                    <p>Entry Fee: No entry fee</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Bandra+-+Worli+Sea+Link,+Mumbai/@19.0298247,72.8157485,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ceb3b002576f:0xf51617363a2f6536!8m2!3d19.0298247!4d72.8157485!16s%2Fg%2F11cfmj34c?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\bandra worli sea.jpg" alt="" height=238.2px>
+                    <h3>Bandra-Worli Sea Link</h3>
+                    <p>Location: Kesarinath Buva Bhaye Marg, Koliwada, Worli, Mumbai, </p>
+                    <p>Visit Timings: 24hrs;</p>
+                    <p>Entry Fee: ₹70 - ₹105 per Car
+                        ₹110 - ₹165 per Tempo/LCV
+                        ₹145 - ₹215 per Truck/Bus</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Gateway+Of+India+Mumbai/@18.9219841,72.8346543,15z/data=!4m2!3m1!1s0x0:0xc70a25a7209c733c?sa=X&ved=2ahUKEwiG1c-C1_n_AhVSB94KHXVfCcoQ_BJ6BAhdEAA&ved=2ahUKEwiG1c-C1_n_AhVSB94KHXVfCcoQ_BJ6BAhrEAg"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\gateway of india.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Gateway Of India</h3>
+                    <p>Location: Apollo Bandar, Colaba, Mumbai</p>
+                    <p>Timings: Mon: 24:00hrs; </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Kanheri+Caves/@19.2058509,72.9068504,15z/data=!4m2!3m1!1s0x0:0xf5677ab36922b95f?sa=X&ved=2ahUKEwjyycGR1_n_AhVM0GEKHch2BMwQ_BJ6BAhtEAA&ved=2ahUKEwjyycGR1_n_AhVM0GEKHch2BMwQ_BJ6BQiAARAI"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\kanheri caves.jpg" alt="" height=238.2px>
+                    <h3>Kanheri Caves</h3>
+                    <p>Location: Sanjay Gandhi National Park, Western Express Highway, Borivali East, Mumbai</p>
+                    <p>Timings: 10:30 am - 05:00 pm; every day</p>
+                    <p>Entry Fee: ₹5 per head(Indian Tourists)/₹100 per head(Foreign Tourists</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Global+Vipassana+Pagoda/@19.2282034,72.8058891,15z/data=!4m2!3m1!1s0x0:0x4ce86be376e098ba?sa=X&ved=2ahUKEwjDxZKb1_n_AhUGZt4KHQy1BRMQ_BJ6BAhYEAA&ved=2ahUKEwjDxZKb1_n_AhUGZt4KHQy1BRMQ_BJ6BAh0EAg"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\global vipassana pagoda.jpg" alt="" height=238.2px>
+                    <h3>Global Vipassana Pagoda</h3>
+                    <p>Location: Global Pagoda Road near Esselworld Gorai, Borivali West, Mumbai</p>
+                    <p>Timings: 6:30 a.m. to 6:30 p.m.; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Shree+Siddhivinayak+Temple/@19.0168625,72.8304531,15z/data=!4m2!3m1!1s0x0:0xcc61876914526329?sa=X&ved=2ahUKEwj38_K21_n_AhVB72EKHaW-DwAQ_BJ6BAhfEAA&ved=2ahUKEwj38_K21_n_AhVB72EKHaW-DwAQ_BJ6BAh4EAg"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\shree siddhivinayak.jpg" alt="" height=238.2px>
+                    <h3>Shree Siddhivinayak</h3>
+                    <p>Location: Prabhadevi, ‎Dadar</p>
+                    <p>Timings: 5:30 am to 10:00 pm; every day </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Nariman+Point,+Mumbai,+Maharashtra/@18.9247895,72.8232769,16z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1e95bee9cff:0x347c4d95cbed4988!8m2!3d18.9255728!4d72.8242221!16zL20vMDJ2cHY2?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\nariman-point.jpg" alt="" height=238.2px>
+                    <h3>Nariman Point</h3>
+                    <p>Location: Southern tip of the Mumbai, at the end of Marine Drive.</p>
+                    <p>Timings: 24:00hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Elephanta+Caves/@18.9633342,72.8614459,12z/data=!4m19!1m12!4m11!1m3!2m2!1d72.9524265!2d18.964146!1m6!1m2!1s0x3be7c5307da3602f:0xf4ab181b1aaef53f!2sGharapuri,+Maharashtra+400094!2m2!1d72.9314864!2d18.9633474!3m5!1s0x3be7c5307da3602f:0xf4ab181b1aaef53f!8m2!3d18.9633474!4d72.9314864!16zL20vMDIwcmI1?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\elephanta caves.jpg" alt="" height=238.2px>
+                    <h3>Elephanta Caves</h3>
+                    <p>Location: Elephanta Island, Gharapuri, Mumbai Harbour, Maharashtra </p>
+                    <p>Timings: 09:30 am and 05:30 pm(Tue-Sun),closed on Mon</p>
+                    <p>Entry Fee: Indian INR 40/
+                        Foreigner INR 600/
+                        (Children Below Age 15) Free
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Wankhede+Stadium/@18.9388528,72.825764,15z/data=!4m2!3m1!1s0x0:0x87d6e47e04df3916?sa=X&ved=2ahUKEwjFzY381_n_AhVG4WEKHfM2Cx8Q_BJ6BAhnEAA&ved=2ahUKEwjFzY381_n_AhVG4WEKHfM2Cx8Q_BJ6BAh-EAg"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\wankhede stadium.jpg" alt="" height=238.2px>
+                    <h3>Wankhede Stadium</h3>
+                    <p>Location: Vinoo Mankad Rd, Churchgate, Mumbai, Maharashtra</p>
+                    <p>Timings: 11:00 am - 08:00 pm;everyday</p>
+                    <p>Entry Fee: 163 INR</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>            
+        </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

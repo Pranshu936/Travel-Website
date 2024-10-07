@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Kolkata</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            scroll-behavior: smooth;
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.199);
+
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(238, 227, 227);
+            font-family: var(--font-family);
+
+        }
+
+        #home h3 {
+            position: relative;
+            top: 250px;
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(kolkata\ b.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 115%;
+            width: 100%;
+            z-index: -1;
+            background-position: 0px -50px;
+
+
+        }
+
+        #home h1 {
+            color: rgb(238, 227, 227);
+            text-align: center;
+            font-family: var(--font-family);
+            position: relative;
+            top: 240px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+            font-size: 1.2em;
+            position: relative;
+            top: 3rem;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 17rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 1rem auto;
+            position: relative;
+            top: 1rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 1rem;
+            left: 10.7rem;
+            font-family:var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 1rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Kolkata</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Kolkata</h1>
+        <p>
+        <h3>Top 9 places to visit in Kolkata</h3>
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Kolkata</h1>
+        <p id="s2">Kolkata (formerly Calcutta) is the capital of India's West Bengal state. Founded as an East India
+            Company trading post, it was India's capital under the British Raj from 1773–1911. Today it’s known for its
+            grand colonial architecture, art galleries and cultural festivals. It’s also home to Mother House,
+            headquarters of the Missionaries of Charity, founded by Mother Teresa, whose tomb is on site. It is the
+            primary business, commercial, and financial hub of Eastern India and the main port of communication for
+            North-East India.[17] According to the 2011 Indian census, Kolkata is the seventh-most populous city in
+            India, with a population of 4.5 million residents within the city limits, and a population of over 14.1
+            million residents in the Kolkata Metropolitan Area.</p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather" style="margin-bottom: 10px;">
+       <div id="weather-info"></div>
+       <script>getWeather('Kolkata')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Victoria+Memorial/@22.5448082,88.3425578,15z/data=!4m2!3m1!1s0x0:0xb540e4bce39763?sa=X&ved=2ahUKEwjJg4y19fn_AhVKwTgGHUCqDR8Q_BJ6BAheEAA&hl=en-IN&gl=in&ved=2ahUKEwjJg4y19fn_AhVKwTgGHUCqDR8Q_BJ6BAh1EAg"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\Victoria Memorial.jpg" alt="" height=238.2px>
+                    <h3> Victoria Memorial</h3>
+                    <p>Location: Queens Way, Maidan, Kolkata</p>
+                    <p>Timings: 10:00 am to 5:00 pm; everyday </p>
+                    <p>Entry Fee: ₹ 25 for Indians;
+                        ₹ 100 for Foreigners </p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Howrah+Bridge/@22.5851433,88.3468005,15z/data=!4m6!3m5!1s0x3a0277bfbb1eeb1b:0xc9840aaa8c411199!8m2!3d22.5851433!4d88.3468005!16zL20vMDV0czV5?hl=en-IN&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\Howrah Bridge.jpg" alt="" height=238.2px>
+                    <h3>Howrah Bridge</h3>
+                    <p>Location: Howrah, Kolkata</p>
+                    <p>Visit Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Dakshineswar+Kali+Temple/@22.6549087,88.3575307,15z/data=!4m2!3m1!1s0x0:0xffa380efed305d4c?sa=X&ved=2ahUKEwi8gvji9fn_AhWFxjgGHa96AOsQ_BJ6BAhYEAA&hl=en-IN&gl=in&ved=2ahUKEwi8gvji9fn_AhWFxjgGHa96AOsQ_BJ6BAh1EAg"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\Dakshineswar Kali Temple.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Dakshineswar Kali Temple</h3>
+                    <p>Location: Dakshineswar, Kolkata</p>
+                    <p>Timings: 6:00 am to 8:30 pm; everyday</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Science+City,Kolkata/@22.5401381,88.3960564,15z/data=!4m2!3m1!1s0x0:0x676bbf22d04354e8?sa=X&ved=2ahUKEwjW_Mj09fn_AhUE2DgGHQ4sCzAQ_BJ6BAhoEAA&hl=en-IN&gl=in&ved=2ahUKEwjW_Mj09fn_AhUE2DgGHQ4sCzAQ_BJ6BQiBARAI"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\Science City Kolkata.jpg" alt="" height=238.2px>
+                    <h3>Science City Kolkata</h3>
+                    <p>Location: JBS Haldane Ave, Mirania Gardens, East Topsia, Topsia, Kolkata</p>
+                    <p>Timings: 10:00 am to 6:00pm; every day</p>
+                    <p>Entry Fee: ₹60 per person</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Kalighat+mandir/@22.5202404,88.3420364,15z/data=!4m2!3m1!1s0x0:0x33b66c43ff5d3a8?sa=X&ved=2ahUKEwjg_pKB9vn_AhV42TgGHUiZAyUQ_BJ6BAhuEAA&hl=en-IN&gl=in&ved=2ahUKEwjg_pKB9vn_AhV42TgGHUiZAyUQ_BJ6BQiFARAI"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\Kalighat.jpg" alt="" height=238.2px>
+                    <h3>Kalighat</h3>
+                    <p>Location: Anami Sangha, Kalighat, Kolkata</p>
+                    <p>Timings: 5:00 am to 10:30 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Belur+Math/@22.6326565,88.3563815,15z/data=!4m2!3m1!1s0x0:0x9e346e968d3e4219?sa=X&ved=2ahUKEwiv3YiJ9vn_AhWa3TgGHcEwCSQQ_BJ6BAhiEAA&hl=en-IN&gl=in&ved=2ahUKEwiv3YiJ9vn_AhWa3TgGHcEwCSQQ_BJ6BQiAARAI"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\Belur Math.jpg" alt="" height=238.2px>
+                    <h3>Belur Math</h3>
+                    <p>Location: Belur, Howrah, Kolkata</p>
+                    <p>Timings: 8:00 am to 5:00 pm; every day </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Eden+Gardens/@22.5646081,88.3432645,15z/data=!4m2!3m1!1s0x0:0x1d1b1884bdbbbd79?sa=X&ved=2ahUKEwjPw7em9vn_AhWC9zgGHfuGCCIQ_BJ6BAhoEAA&hl=en-IN&gl=in&ved=2ahUKEwjPw7em9vn_AhWC9zgGHfuGCCIQ_BJ6BAh9EAg"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\Eden Gardens.jpg" alt="" height=238.2px>
+                    <h3>Eden Gardens</h3>
+                    <p>Location: Maidan, B.B.D. Bagh, Kolkata</p>
+                    <p>Timings: 5:00 am to 11:30 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Eco+Park/@22.603134,88.4671428,15z/data=!4m6!3m5!1s0x3a027544e22a5b6f:0xf22acb90ceebe765!8m2!3d22.603134!4d88.4671428!16s%2Fm%2F0p3pdg5?hl=en-IN&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\Eco Park.jpg" alt="" height=238.2px>
+                    <h3>Eco Park</h3>
+                    <p>Location: Major Arterial Road(South-East, Biswa Bangla Sarani, AA II, Newtown, Kolkata </p>
+                    <p>Timings: 12:00 pm to 7:30 pm; every day;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Zoological+Garden,+Alipore/@22.5370343,88.3316697,15z/data=!4m2!3m1!1s0x0:0xdf99a9bbe613a36a?sa=X&ved=2ahUKEwjSwo7F9vn_AhWEzzgGHdIsC4wQ_BJ6BAhYEAA&hl=en-IN&gl=in&ved=2ahUKEwjSwo7F9vn_AhWEzzgGHdIsC4wQ_BJ6BAh1EAg"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\Alipore Zoological Garden.jpg" alt="" height=238.2px>
+                    <h3>Alipore Zoological Garden</h3>
+                    <p>Location:  Alipore Rd, Alipur Zoological Garden, Alipore, Kolkata</p>
+                    <p>Timings: 09:00 am to 4:30 pm; everyday</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>           
+        </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

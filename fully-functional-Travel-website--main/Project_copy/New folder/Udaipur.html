@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="//Project_copy/New folder/weather.js"></script>
+    <title>Udaipur</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            ;
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(Udaipur1.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin-top: 0%;
+
+
+        }
+
+        #home h1 {
+            color: rgb(248, 250, 250);
+            text-align: center;
+            font-family: var(--font-family);
+            margin-top: 60px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family:var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Udaipur</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Udaipur</h1>
+        <p>
+        <h3>Top 9 places to visit in Udaipur</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Udaipur</h1>
+        <p id="s2">One of the most popular cities in Rajasthan, Udaipur is quite famous for its lakes and palaces. Known
+            as ‘Jewel of Mewar’, this city was founded by Maharana Udai Singh in 1553, on the banks of Lake Pichola.
+            Claimed as the most romantic city of the royal state of Rajasthan, it is one of the prime destinations of
+            the week-long journey of the Palace on Wheels. Udaipur boasts of picturesque locations and scenic
+            surroundings offering an amazing vacation option for discerning travellers. Today, it is a perfect mix of
+            old-world charm and contemporary attractions.
+            <br>
+            <br>
+            Every year, a crazy number of tourists visit the ‘City of Lakes’ Udaipur, by getting enchanted from its
+            vibrant culture. It is still inhabited by the people of Bhil tribe, so you can see people dressed in
+            traditional Ghagra-Choli, laden with huge silver jewellery, even today. People of all religion- Hinduism,
+            Islam, Sikhism and Christianity reside here. The modern city of Udaipur is a hub of cultural activities,
+            music and folk dance. During your trip, you can see both kinds of people- those following their age-old
+            traditions and also those who have adopted a modern style of living. They are extremely friendly and good
+            natured. The city plays host to a number of fairs and festivals of the country.
+
+        </p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Udaipur')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Lake+Pichola,+Pichola,+Udaipur,+Rajasthan+313001/data=!4m2!3m1!1s0x3967e56041553fe7:0xdfef96846886cdd0?sa=X&ved=2ahUKEwj64PvL5fn_AhXY4TgGHec1BW0Q8gF6BAhnEAA&ved=2ahUKEwj64PvL5fn_AhXY4TgGHec1BW0Q8gF6BAhwEAE"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\Lake Pichola.jpg" alt="" height=238.2px>
+                    <h3> Lake Pichola</h3>
+                    <p>Location: Besides Udaipur City Palace, Picchola Lake, Udaipur</p>
+                    <p>Timings: 9:00 AM - 6:00 PM</p>
+                    <p>Entry Fee: No entry fee</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/City+Palace/@24.5764421,73.6835109,15z/data=!4m2!3m1!1s0x0:0x9257af76faeaab0e?sa=X&ved=2ahUKEwjAmcnb5fn_AhXC3TgGHT71DTAQ_BJ6BAhmEAA&ved=2ahUKEwjAmcnb5fn_AhXC3TgGHT71DTAQ_BJ6BQiCARAI"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\City Palace.jpg" alt="" height=238.2px>
+                    <h3>City Palace</h3>
+                    <p>Location: City Palace Road, Udaipur</p>
+                    <p>Visit Timings: 9:30 AM - 5:30 PM</p>
+                    <p>Entry Fee: Rs. 300 for adults, Rs. 100 for children under 18 and also Rs. 100 for studens
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Fateh+Sagar+Lake,+Udaipur,+Rajasthan+313001/data=!4m2!3m1!1s0x3967e53c8c2ac0e3:0x797deb83de7b53b8?sa=X&ved=2ahUKEwj49fvn5fn_AhXV-TgGHap3Av4Q8gF6BAhXEAA&ved=2ahUKEwj49fvn5fn_AhXV-TgGHap3Av4Q8gF6BAhrEAE"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\Fateh Sagar Lake.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Fateh Sagar Lake</h3>
+                    <p>Location: Udaipur Road, Near Sulabh Complex, Udaipur</p>
+                    <p>Timings: 10:00 AM - 5:00 PM</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Dhebar+Lake,+Rajasthan+313706/data=!4m2!3m1!1s0x3967baee9ac7ae71:0x4542286f2b2499e3?sa=X&ved=2ahUKEwjGkJ325fn_AhVR-TgGHTI_AfAQ8gF6BAhrEAA&ved=2ahUKEwjGkJ325fn_AhVR-TgGHTI_AfAQ8gF6BAh2EAE"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\Jaisamand Lake.jpg" alt="" height=238.2px>
+                    <h3>Jaisamand Lake</h3>
+                    <p>Location: Jaisamand Lake, Island 1, Udaipur-Banswara Road, Udaipur</p>
+                    <p>Timings: 10:00 AM - 5:00 PM</p>
+                    <p>Entry Fee: No entry fee, Boat ride: INR 30-80</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Jagdish+Temple/@24.5796536,73.6836153,15z/data=!4m2!3m1!1s0x0:0xf00f0180a7c55338?sa=X&ved=2ahUKEwit26Gm5vn_AhXG7jgGHZfRAeEQ_BJ6BAhrEAA&ved=2ahUKEwit26Gm5vn_AhXG7jgGHZfRAeEQ_BJ6BAh9EAg"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\Jagdish Temple.jpg" alt="" height=238.2px>
+                    <h3>Jagdish Temple</h3>
+                    <p>Location: Inside City Palace Complex, Udaipur</p>
+                    <p>Timings: 4:15 AM - 1:00 PM, 5:15 PM - 8:00 PM</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Jagmandir/@24.5675944,73.6777615,15z/data=!4m2!3m1!1s0x0:0x52969c88012ca666?sa=X&ved=2ahUKEwjvneqx5vn_AhXO_DgGHfxYD6UQ_BJ6BAhiEAA&ved=2ahUKEwjvneqx5vn_AhXO_DgGHfxYD6UQ_BJ6BAh9EAg"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\Jag Mandir Palace.jpg" alt="" height=238.2px>
+                    <h3>Jag Mandir Palace</h3>
+                    <p>Location: Pichola, Udaipur</p>
+                    <p>Timings: Mon - Sun 9:00 am - 8:00 pm</p>
+                    <p>Entry Fee: 325 per person Adult (boat ride for an hour) 165 per person Child (boat ride for an
+                        hour) 225 per person Adult (boat ride for 30 mins)</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Vintage+and+Classic+Car+Museum/@24.5754884,73.6944993,15z/data=!4m2!3m1!1s0x0:0xbf95c9aa358e92e2?sa=X&ved=2ahUKEwjT3qzI5vn_AhVtzTgGHUt_D9IQ_BJ6BAhiEAA&ved=2ahUKEwjT3qzI5vn_AhVtzTgGHUt_D9IQ_BJ6BAhzEAg"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\Vintage Car Museum.jpg" alt="" height=238.2px>
+                    <h3>Vintage Car Museum</h3>
+                    <p>Location: Garden Road, Udaipur</p>
+                    <p>Timings: 9.30 am to 5.30 pm </p>
+                    <p>Entry Fee: INR 100 per person
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Dudh+Talai,+Pichola,+Udaipur,+Rajasthan+313001/data=!4m2!3m1!1s0x3967ef89a39c83a9:0x160d1268e05ceeb1?sa=X&ved=2ahUKEwiDitrW5vn_AhXf-zgGHXqVCqIQ8gF6BAhJEAA&ved=2ahUKEwiDitrW5vn_AhXf-zgGHXqVCqIQ8gF6BAhTEAE"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\Doodh Talai Musical Garden.jpg" alt="" height=238.2px>
+                    <h3>Doodh Talai Musical Garden</h3>
+                    <p>Location: Dudh Talai, Pichola, Udaipur</p>
+                    <p>Timings: Mon - Sun 9:00 am - 10:00 pm</p>
+                    <p>Entry Fee: Rs. 20 per person for Indian Adults, Rs. 10 per person for Indian Children,Rs. 30 per
+                        person for Foreigners
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Marvel+Water+Park/@24.5358679,73.6799253,15z/data=!4m2!3m1!1s0x0:0x4cb5201ec5ffee49?sa=X&ved=2ahUKEwil0dDj5vn_AhVL2DgGHetlB_kQ_BJ6BAhuEAA&ved=2ahUKEwil0dDj5vn_AhVL2DgGHetlB_kQ_BJ6BQiGARAI"
+                target="_blank">
+                <div class="box" id="box-9">
+                    <img src="../cities\Marvel Water Park.png" alt="" height=238.2px>
+                    <h3>Marvel Water Park</h3>
+                    <p>Location: Goverdhan Vilas, Saras Parlor, Sector 14, Udaipur</p>
+                    <p>Timings: Mon - Sun 10:30 am - 6:00 pm</p>
+                    <p>Entry Fee: Rs. 400 for adults, Rs. 250 for children, Rs. 100 for locker (if required) and Rs. 50
+                        for swimming costume (one can bring their own)</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>            
+        </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

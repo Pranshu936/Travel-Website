@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Signup</title>
+
+    <style>
+        .container {
+            display: flex;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            padding-left: 90px;
+            /* padding-top: 20px; */
+            position: relative;
+            top: 11rem;
+            left: 4rem;
+        }
+
+        .container form {
+            width: 75%;
+            height: 68vh;
+            align-self: center;
+            box-sizing: border-box;
+            margin-right: 3%;
+            margin-left: 10%;
+        }
+
+        .c1, .c2 {
+            width: 50%;
+            height: 700px;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            top: 5rem;
+        }
+
+        .container div {
+            margin: 14px 2px;
+        }
+        .container input {
+            box-sizing: border-box;
+            width: 75%;
+            height: 56%;
+            margin: 5px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            display: block;
+            color: rgb(0, 0, 0);
+            font-size: 17px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid black;
+            
+        }
+
+        .container input[type="email"] {
+            border: none;
+            margin-top: 5%;
+            padding-bottom: 2%;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            
+        }
+
+        .container input[type="password"] {
+            border: none;
+            margin-top: 5%;
+            padding-bottom: 2%;
+            border-bottom: 2px solid black;
+            background: transparent;
+            outline: none;
+        }
+        .container h2 {
+            font-size: 40px;
+            width: 35%;
+            margin: -2px auto;
+        }
+        .container label {
+            font-size: 22px;
+            font-weight: 400;
+            margin-left: 3px;
+            top: 15px;
+            color: #000000;
+            display: inline-block;
+            text-align: center;
+            width: 70%;
+        }
+        
+        .container label#p{
+            font-size: 22px;
+            font-weight: 400;
+            margin-left: 3px;
+            margin-top: 40px;
+            top: 15px;
+            color: #000000;
+        }
+
+        .container label#e{
+            font-size: 22px;
+            font-weight: 400;
+            margin-left: 3px;
+            top: 15px;
+            color: #000000;
+        }
+
+        .container input:hover {
+            border-bottom: 2px solid rgb(7, 65, 92);
+        }
+        .container h2 {
+            color: blue
+        }
+        .container-head{
+            position: relative;
+            left: 5rem;
+            bottom: 6rem;
+        }
+        .img::before {
+            background-image: url(login_bg.avif);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            z-index: -2;
+            content: "";
+        }
+        .c1::before, .c2::before {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 70%;
+            height: 60%;
+            background-color: cadetblue;
+            opacity: 0.5;
+            z-index: -1;
+            box-shadow: 0.5px 4px 4px rgb(54, 51, 51);
+            content: "";
+        }
+        .btn {
+            background-color: rebeccapurple;
+            border: none;
+            opacity: 0.8;
+            cursor: pointer;
+            margin-top: 12px;
+            width: 77%;
+            height: 32px;
+            align-content: center;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            transition-property: color;
+            color: chocolate;
+            transition-duration: .65s;
+            background-color: cornsilk;
+        }
+        .login {
+            display: block;
+            width: 30%;
+            margin: auto;
+        }
+        #submit {
+            height: 60px;
+            width: 69%;
+            margin: 12%;
+            display: flex;
+            box-sizing: border-box;
+        }
+        
+        #logout{
+            font-size: 25px;
+            color: rgb(55, 132, 154);
+        }
+
+        ::-webkit-input-placeholder {
+            color: black;
+            opacity: 0.5;
+            font-size: 15px;
+        }
+        a:hover{
+            text-decoration: none;
+            transition-property: color;
+            transition-duration: .6s;
+            color: chocolate;
+        }
+        #logo{
+            position: absolute;
+            width: 35%;
+            height: auto;
+            animation-name: logo ;
+            margin-top: 20%;
+            animation-duration: 1.3s;
+        }
+        @keyframes logo {
+            100%{padding-left: 65%;transform: rotate(-20deg);} 
+        }
+        h1{
+            position: absolute;
+            margin-top: 2.8%;
+            margin-left: 41%;
+            display: inline-block;
+            animation-name: heading;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            font-family: 'Hina Mincho', serif;
+            color:rgb(66, 65, 65);
+            text-shadow: 2px 2px 8px rgb(175, 33, 104);
+            font-size: 6vh;
+        }
+
+        .col-sm-12{
+            position: relative;
+            top: -7rem;
+        }
+
+
+        @keyframes heading{
+            0%{margin-top: 2px;}
+            100%{padding-top: .3%;}
+        }
+    </style>
+    <style>
+        body {
+            background-image: url(login_bg.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <style>
+        ::-webkit-input-placeholder {
+            color: #000000;
+            opacity: 0.5;
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <!-- <div class="img"></div> -->
+    <!-- <img src="logoTransparent.png" alt="" id="logo"> -->
+    <h1 id="welcome">TravelWithUs</h1>
+    <div class="container">
+        <div class="c1">
+            <form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data">
+                <div class="row">
+                    <h3 class = "container-head">New Users Register here!</h3>
+                    <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="email" id = "e">Email</label>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" id = "p">Password</label>
+                                <input type="password" name="password" id="password" class="form-control"  placeholder="Enter your password">
+                            </div>
+                            <button type="button" id="register" name="register" class="btn btn-success">Register Now</button>
+                        </div><!-- end col -->
+                    </div>
+                    
+                </form>
+            
+        </div>
+        
+        <div class="c2">
+            <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
+                <div class="row">
+                    <h3 class = "container-head">Existing Users Login here!</h3>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="email" id = "e">Email</label>
+                            <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" id="p">Password</label>
+                            <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
+                        </div>
+                        <button type="button" id="login" name="login" class="btn btn-success">Login</button>
+                    </div><!-- end col -->
+                </div><!--  end row -->
+            </form>
+        </div>
+    </div>
+  
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+    // web app's Firebase configuration
+    
+    const firebaseConfig = {
+    apiKey: "AIzaSyBC23WuMaQ-n7ktmVFLe-hqWevKGMy5pMk",
+    authDomain: "tourism-93a29.firebaseapp.com",
+    databaseURL: "https://tourism-93a29-default-rtdb.firebaseio.com",
+    projectId: "tourism-93a29",
+    storageBucket: "tourism-93a29.appspot.com",
+    messagingSenderId: "516847594856",
+    appId: "1:516847594856:web:a85520b0060b446dd9badd",
+    measurementId: "G-W8HLLD34KB"
+  };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    console.log(app);
+
+    
+
+    //----- New Registration code start	  
+    document.getElementById("register").addEventListener("click", function() {
+        var email =  document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        //For new registration
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert("Registration successfully!!");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          console.log(errorMessage);
+          alert(error);
+        });		  		  
+    });
+    //----- End
+
+    //----- Login code start	  
+    document.getElementById("login").addEventListener("click", function() {
+        var email =  document.getElementById("login_email").value;
+        var password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert(user.email+" Login successfully!!!");
+          document.getElementById('logout').style.display = 'block';
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          alert(errorMessage);
+        });		  		  
+    });
+    //----- End
+
+    //----- Logout code start	  
+    document.getElementById("logout").addEventListener("click", function() {
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            console.log('Sign-out successful.');
+            alert('Sign-out successful.');
+            document.getElementById('logout').style.display = 'none';
+          }).catch((error) => {
+            // An error happened.
+            console.log('An error happened.');
+          });		  		  
+    });
+    //----- End
+
+  </script>
+
+
+</html>
+

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Chennai</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+
+            background-color: rgba(0, 0, 0, 0.199);
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            ;
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(Chennai1.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            margin-top: 0%;
+
+
+        }
+
+        #home h1 {
+            color: rgb(248, 250, 250);
+            text-align: center;
+            font-family: var(--font-family);
+            margin-top: 60px;
+        }
+
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family:var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Chennai</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Chennai</h1>
+        <p>
+        <h3>Top 9 places to visit in Chennai</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Chennai</h1>
+        <p id="s2">Chennai is a full arts, historical and cultural experience you should not miss on. Chennai is home to
+            many
+            museums, galleries, and other institutions, many of which are free of admission charges and are major
+            tourist attractions as well as playing a research role. The city also has one of the oldest museums and art
+            galleries in the country – Government Museum, Chennai and The National Art Gallery (Chennai), established in
+            the early 18th century.The city also hosts two art festivals annually. The "Fort Museum" inside the premises
+            of Fort St. George is an important museum having a noteworthy collection of objects of the British era in
+            its collection. The museum is managed by the Archaeological Survey of India and has in its possession, the
+            first Flag of India hoisted at Fort St George after the declaration of India's Independence on 15 August
+            1947.
+            <br>
+            <br>
+            Chennai is a major centre for music, art and culture in India. The city is known for its classical
+            dance shows. In 1930, for the first time in India, Madras University introduced a course of music, as part
+            of the Bachelor of Arts curriculum. The Madras Music Season, initiated by Madras Music Academy in 1927,
+            is celebrated every year during the month of December. It features performances of traditional Carnatic
+            music by many artists in and around the city. The main folk music in Chennai is Gaana, a combination of
+            various folk musics sung mainly sung in the working-class area of North Chennai.
+            <br>
+            <br>
+            The city has a diverse theatre scene and is one of the important centres for Bharata Natyam, a classical
+            dance form that originated in Tamil Nadu and is the oldest dance of India. An important cultural centre for
+            Bharata Natyam is Kalakshetra, on the beach in the south of the city. Chennai has been featured in UNESCO
+            Creative Cities Network (UCCN) list since October 2017 for its century-old musical tradition. Chennai is
+            also home to some choirs, who during the Christmas season stage various carol performances across the city
+            in Tamil and English.
+
+        </p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Chennai')</script>
+    </div>
+
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Kailasanathar+Temple/@12.8422576,79.6897132,15z/data=!4m2!3m1!1s0x0:0x571f6d5f5d248005?sa=X&ved=2ahUKEwjGmfnr3vn_AhUWumMGHdcjBUQQ_BJ6BAh2EAA&ved=2ahUKEwjGmfnr3vn_AhUWumMGHdcjBUQQ_BJ6BQiPARAI"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\Kanchi Kailasanathar Temple.jpg" alt="Error loading image" height=238.2px>
+                    <h3>Kanchi Kailasanathar Temple</h3>
+                    <p>Location: Kanchipuram, Chennai</p>
+                    <p>Timings: 5:30 am - 12:00 pm; every day </p>
+                    <p>Entry Fee: No entry fee</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Arignar+Anna+Zoological+Park/@12.8797685,80.0808294,15z/data=!4m6!3m5!1s0x3a52f604b07fd4cd:0xb2f00bc9eb6c9c86!8m2!3d12.8797685!4d80.0808294!16zL20vMDc3Mmp0?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\Arignar Anna Zoological Park.png" alt="Error loading image" height=238.2px>
+                    <h3>Arignar Anna Zoological Park</h3>
+                    <p>Location: Grand Southern Trunk Road, Chennai</p>
+                    <p>Visit Timings: 9:00 am - 6:00 pm;</p>
+                    <p>Entry Fee: 75 per person for adults, 35 per person for children</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Government+Museum+Chennai/@13.0716298,80.2567955,15z/data=!4m2!3m1!1s0x0:0x9507fa7b131c1c36?sa=X&ved=2ahUKEwjG9eSr5Pn_AhXW7TgGHX1OD_QQ_BJ6BAhmEAA&ved=2ahUKEwjG9eSr5Pn_AhXW7TgGHX1OD_QQ_BJ6BQiEARAI"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\Government Museum.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Government Museum</h3>
+                    <p>Location: Casa Major Rd, Egmore, Chennai</p>
+                    <p>Timings: Mon - Thu 9:30 am - 5:00 pm, Fri Closed, Sat - Sun 9:30 am - 5:00 pm; </p>
+                    <p>Entry Fee: 15 INR for Indians, while foreigners are charged 250 INR</p>
+                </div>
+            </a>
+            <a
+                href="https://www.google.com/maps/place/Dr+MGR+Memorial/@13.0642549,80.2853838,15z/data=!4m2!3m1!1s0x0:0xb301b23921205f1e?sa=X&ved=2ahUKEwiWy7W65Pn_AhV-yqACHT0YAqYQ_BJ6BAhpEAA&ved=2ahUKEwiWy7W65Pn_AhV-yqACHT0YAqYQ_BJ6BAh5EAg">
+                <div class="box" id="box-4">
+                    <img src="../cities\MGR_Memorial.jpg" alt="Error loading image" height=238.2px>
+                    <h3>MGR Memorial</h3>
+                    <p>Location: Navalar Nagar, Chepauk, Triplicane, Chennai</p>
+                    <p>Timings: Mon - Sun 9:00 am - 3:00 pm</p>
+                    <p>Entry Fee: Rs. 25 for Indian citizens and Rs. 300 for foreigners</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Gingee+Fort/@12.2500981,79.394847,15z/data=!4m2!3m1!1s0x0:0x420a331e9420087f?sa=X&ved=2ahUKEwi_48TE5Pn_AhU81TgGHR7vD6MQ_BJ6BAhfEAA&ved=2ahUKEwi_48TE5Pn_AhU81TgGHR7vD6MQ_BJ6BAhzEAg"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\Gingee Fort.jpg" alt="Error loading image" height=238.2px>
+                    <h3>Gingee Fort</h3>
+                    <p>Location: NH 77, Gingee, Villupuram, Tamil Nadu</p>
+                    <p>Timings: 9:30 am to 4:30 pm(Tue-Sun), closed (Mon)</p>
+                    <p>Entry Fee: Indian -₹ 35 / Foreigner - ₹ 550</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Shore+Temple/@12.6164515,80.1993321,15z/data=!4m2!3m1!1s0x0:0xaa128d8a959b1141?sa=X&ved=2ahUKEwjui9jR5Pn_AhWg1zgGHQwfDgQQ_BJ6BAhbEAA&ved=2ahUKEwjui9jR5Pn_AhWg1zgGHQwfDgQQ_BJ6BQiHARAI"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\Shore Temple.jpg" alt="Error loading image" height=238.2px>
+                    <h3>Shore Temple</h3>
+                    <p>Location: Shore Temple Road, Mahabalipuram, Tamil Nadu</p>
+                    <p>Timings: Mon - Sun 6:00 am - 9:00 pm</p>
+                    <p>Entry Fee: Rs. 10 for Indian citizens and Rs. 250 for foreigners</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Marina+Beach,+Tamil+Nadu/data=!4m2!3m1!1s0x3a52689bb60132bb:0x549cf8edf62b60a?sa=X&ved=2ahUKEwiJ26z65Pn_AhVA9zgGHfLHCUEQ8gF6BAhxEAA&ved=2ahUKEwiJ26z65Pn_AhVA9zgGHfLHCUEQ8gF6BAh-EAE"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\Marina Beach.jpg" alt="Error loading image" height=238.2px>
+                    <h3>Marina Beach</h3>
+                    <p>Location: Chennai, along the Bay of Bengal.</p>
+                    <p>Timings: Mon - Sun 24 hours</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Vivekananda+House/@13.0494675,80.2803374,15z/data=!4m6!3m5!1s0x3a52689cc49d64dd:0x488b6c9faaa9031!8m2!3d13.0494675!4d80.2803374!16s%2Fm%2F025w557?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\Vivekanandar Illam.jpg" alt="Error loading image" height=238.2px>
+                    <h3>Vivekanandar Illam</h3>
+                    <p>Location: Kamarajr Salai, Triplicane, Chennai</p>
+                    <p>Timings: Mon Closed, Tue - Sun 10:00 am - 1:00 pm</p>
+                    <p>Entry Fee: 10 per person for adults. 5 per person for children</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Santhome+Cathedral+Basilica/@13.0335858,80.2776808,15z/data=!4m2!3m1!1s0x0:0xa148dd2e4ab794de?sa=X&ved=2ahUKEwi6m7iU5fn_AhXKzjgGHQcjARMQ_BJ6BAhwEAA&ved=2ahUKEwi6m7iU5fn_AhXKzjgGHQcjARMQ_BJ6BQiPARAI"
+                target="_blank">
+                <div class="box" id="box-9">
+                    <img src="../cities\San Thome Basilica.png" alt="Error loading image" height=238.2px>
+                    <h3>San Thome Basilica.</h3>
+                    <p>Location: Santhome High Road, Chennai, Tamil Nadu</p>
+                    <p>Timings: Mon - Sun 6:00 am - 8:00 pm</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>
+             </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>

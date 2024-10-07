@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Pacifico&display=swap&family=Ruslan+Display&family=Satisfy&display=swap&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Source+Sans+Pro:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="LogoTransparent.png" type="image/png">
+
+    <script src="https://kit.fontawesome.com/b5d0e07930.js" crossorigin="anonymous"></script>
+    <script src="/Project_copy/New folder/weather.js"></script>
+    <title>Goa</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navbar-height: 59px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar {
+
+            position: fixed;
+            width: 100%;
+            height: 7%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.199);
+
+
+        }
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.2;
+
+
+        }
+
+        #navbar ul li {
+            color: rgb(238, 227, 227);
+            list-style: none;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #navbar ul li a {
+            color: rgb(238, 227, 227);
+            display: block;
+            padding: 3px 25px;
+            border-radius: 20px;
+            font-family: var(--font-family);
+            text-decoration: none;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(238, 227, 227);
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 2px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            font-size: 24px;
+            color: rgb(238, 227, 227);
+            font-family: var(--font-family);
+
+        }
+
+
+
+        #home::before {
+            content: "";
+            background: url(goaa.jpg)no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+
+        }
+
+        #home h1 {
+            color: rgb(238, 227, 227);
+            text-align: center;
+            font-family: var(--font-family);
+        }
+
+        .h-primary {
+            font-size: 5rem;
+        }
+
+        /* .section1 {
+            font-family: 'Style Script', cursive;
+            margin: 140px;
+        } */
+
+        .weather {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            text-align: right;
+            margin-bottom: -4rem;
+          
+        }
+        
+        .section1 {
+            font-family: var(--font-family);
+            width: 75%;
+            margin: 2rem auto;
+            margin-top: 15rem;
+            text-align: justify;
+        }
+
+        #s1 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #s2 {
+            padding: 12px 2px;
+            font-size: 1.2em;
+        }
+
+        #grid-heading {
+            font-size: 3rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 6rem;
+            font-family: var(--font-family);
+        }
+
+        span {
+            position: relative;
+            top: 4rem;
+            left: 10.7rem;
+            font-family: var(--font-family);
+        }
+
+        #container2 {
+            display: grid;
+            grid-gap: 1rem;
+            /* border: 2px solid; */
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 1rem;
+            width: 75%;
+            margin: 2rem auto;
+            position: relative;
+            top: 3rem;
+        }
+
+        #container2 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #container2 .box {
+            /* border: 1px solid; */
+            transition: all 0.5s ease-in-out;
+            /* transform: all 1s ease-in-out; */
+            height: 100%;
+        }
+
+        #container2 .box:hover {
+            transform: scale(1.03);
+            box-shadow: -5px 5px 10px 10px rgb(240, 211, 211);
+            ;
+        }
+
+        #container2 .box img {
+            width: 100%;
+            height: 56%;
+        }
+
+        #container2 .box h3 {
+            font-family: var(--font-family);
+            font-size: 1.5rem;
+            padding: 6px;
+
+        }
+
+        #container2 .box p {
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        .end {
+            text-align: center;
+
+            padding: 100px 50px;
+
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 80px;
+            font-weight: 600;
+        }
+
+        .footer p {
+            margin-left: 120px;
+            margin-right: 120px;
+            font-weight: normal;
+            font-size: 13px;
+            font-family: var(--font-family);
+            margin-bottom: 5px;
+        }
+
+        .icons {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="../index.html">TravelWithUs</a></li>
+            <li class="item"><a href="#h">Home</a></li>
+            <li class="item"><a href="#explore">Goa</a></li>
+            <li class="item"><a href="#top">Places To Visit</a></li>
+            <li class="item"><a href="#About">About Us</a></li>
+        </ul>
+    </nav>
+    <a name="h"></a>
+    <section id="home">
+
+        <h1 class="h-primary">Welcome to Goa</h1>
+        <p>
+        <h3>Top 9 places to visit in Goa</h3>
+
+        </p>
+
+    </section>
+    <a name="explore"></a>
+    <div class="section1">
+        <h1 id="s1">Explore Goa</h1>
+        <p id="s2">The small coastal state of GOA is home to alluring beaches, bustling nightlife, and amazing food
+            along with a host of tourist attractions and exciting things to do. You can explore the beautiful churches
+            of Old Goa or the exotic spice plantations inland amongst numerous places to visit. South Goa has quiet
+            secluded beaches for those looking for some quiet introspection while Central Goa boasts of some of the
+            trendiest beaches with happening restaurants and cafes. For an added flavour, you can also discover other
+            top places in Goa like the lovely cities like Panaji and Margao at your own pleasure.Goa is one of the most
+            favorite destination among Indian tourists due to its pristine beaches. Dotted with hundreds of impressive
+            beaches in Goa, the incredible coastline of more than 100 km offers beautiful views and serenity where
+            tourists enjoy and relax in the Sun.</p>
+    </div>
+
+    <a name="weather"></a>
+    <div class="weather">
+       <div id="weather-info"></div>
+       <script>getWeather('Goa')</script>
+    </div>
+
+    <a name="top"></a>
+    <h3 id="grid-heading">Top Sights</h4>
+        <span style="position: relative; left: 11.5rem;"> (click for more info) </a></span>
+        <div id="container2">
+            <a href="https://www.google.com/maps/place/Shree+Mangesh+temple/@15.4449051,73.9663825,15z/data=!4m2!3m1!1s0x0:0xafed600f5cfebbf6?sa=X&ved=2ahUKEwiZpIHQ2fn_AhWMQt4KHRX4CUMQ_BJ6BAheEAA&hl=en&ved=2ahUKEwiZpIHQ2fn_AhWMQt4KHRX4CUMQ_BJ6BAhxEAg"
+                target="_blank">
+                <div class="box" id="box-1">
+                    <img src="../cities\mangeshi temple.jpg" alt="">
+                    <h3> Shree Mangeshi Temple</h3>
+                    <p>Location: Dinanath Mangeshkar Rd, Mangeshi village,Mardol</p>
+                    <p>Timings: 6:00 am to 10:00 pm; everyday </p>
+                    <p>Entry Fee: No entry fee</p>
+
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Fontainhas/@15.4909353,73.8252747,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x3bbfc17018f61fc1:0x19e9317ad58106f8!2sfontainhas!2m2!1d73.8278496!2d15.4909301!3m5!1s0x3bbfc17018f61fc1:0x19e9317ad58106f8!8m2!3d15.4909301!4d73.8278496!16s%2Fg%2F11rtczd1b0?hl=en&entry=ttu"
+                target="_blank">
+                <div class="box" id="box-2">
+                    <img src="../cities\fontainhas.jpg" alt="" height=238.2px>
+                    <h3>Fontainhas</h3>
+                    <p>Location: Rua de Natal,Mala,Panaji</p>
+                    <p>Visit Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Reis+Magos+Fort/@15.4964204,73.8091839,15z/data=!4m2!3m1!1s0x0:0x6b80a342a7a4c04b?sa=X&ved=2ahUKEwj4xdj52fn_AhVOE4gKHSU0DBgQ_BJ6BAhsEAA&ved=2ahUKEwj4xdj52fn_AhVOE4gKHSU0DBgQ_BJ6BAh8EAg"
+                target="_blank">
+                <div class="box" id="box-3">
+                    <img src="../cities\REIS MAGOS FORT.jpg" ALT="" HEIGHT=238.2PX>
+                    <h3>Reis Magos Fort</h3>
+                    <p>Location: Nerul - Reis Margos Rd, beside three kings church, Bardez, Verem</p>
+                    <p>Timings: Mon: closed ;
+                        Tue-Sun: 9:30am to 5:00pm
+                    </p>
+                    <p>Entry Fee: ₹ 50 per person for adults/
+                        ₹ 10 per person on Sundays and Goa Govt.holidays/
+                        Free entry for children below 8yrs of age</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Our+Lady+of+Good+Hope+Church,+Candolim/@15.5179961,73.7747491,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x3bbfc1bbffc4ca8f:0xd7f8495d1916c1a0!2sGQ9G%2B5WW,+Candolim,+Goa+403515!2m2!1d73.777324!2d15.5179909!3m5!1s0x3bbfc1bbffc4ca8f:0xd7f8495d1916c1a0!8m2!3d15.5179909!4d73.777324!16s%2Fg%2F1wf3713r?entry=ttu"
+                target="_blank">
+                <div class="box" id="box-4">
+                    <img src="../cities\church.jpg" alt="" height=238.2px>
+                    <h3>Our Lady of Hope Church</h3>
+                    <p>Location: GQ9G+5WW,Candolim</p>
+                    <p>Timings: 06:00 am to 6:00pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Calangute+Beach,+Goa+403519/data=!4m2!3m1!1s0x3bbfea0148f4ed2b:0xcb592fad5d257d17?sa=X&ved=2ahUKEwiY4p6U2vn_AhXC0mEKHa1mBGMQ8gF6BAhrEAA&ved=2ahUKEwiY4p6U2vn_AhXC0mEKHa1mBGMQ8gF6BAh0EAE"
+                target="_blank">
+                <div class="box" id="box-5">
+                    <img src="../cities\calangute beach.jpg" alt="" height=238.2px>
+                    <h3>Calangute Beach</h3>
+                    <p>Location: Bardez, North Goa</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Baga+Beach,+Goa+403519/data=!4m2!3m1!1s0x3bbfea1cd8a1deff:0xba7066c0ee35c1e0?sa=X&ved=2ahUKEwjl1LKf2vn_AhVPDd4KHQrbDNwQ8gF6BAhfEAA&ved=2ahUKEwjl1LKf2vn_AhVPDd4KHQrbDNwQ8gF6BAhrEAE"
+                target="_blank">
+                <div class="box" id="box-6">
+                    <img src="../cities\baga beach.jpg" alt="" height=238.2px>
+                    <h3>Baga Beach</h3>
+                    <p>Location: Bardez, Goa</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day </p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Candolim+Beach+Rd,+Candolim,+Goa+403515/data=!4m2!3m1!1s0x3bbfc193f5f837bb:0x75b2929e91152780?sa=X&ved=2ahUKEwjF5oGo2vn_AhUFBt4KHUGZAkkQ8gF6BAgWEAA&ved=2ahUKEwjF5oGo2vn_AhUFBt4KHUGZAkkQ8gF6BAgXEAI"
+                target="_blank">
+                <div class="box" id="box-7">
+                    <img src="../cities\candolim beach.jpg" alt="" height=238.2px>
+                    <h3>Candolim Beach</h3>
+                    <p>Location: North Goa along stretch of Aguada Fort, 12,5km from Panaji</p>
+                    <p>Timings: 12:00 am to 11:59 pm; every day</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Lamgao+Buddhist+Caves/@15.5959317,73.9365402,15z/data=!4m2!3m1!1s0x0:0x8f5908f5610aaf20?sa=X&ved=2ahUKEwi1pKqx2vn_AhWVMd4KHbeTBtgQ_BJ6BAhTEAA&ved=2ahUKEwi1pKqx2vn_AhWVMd4KHbeTBtgQ_BJ6BAhiEAg"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\lamgau caves.jpg" alt="" height=238.2px>
+                    <h3>Lamgau Caves</h3>
+                    <p>Location: lamgao bicholim goa, lamgao, Bicholim, Goa </p>
+                    <p>Timings: 24hrs;</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+            <a href="https://www.google.com/maps/place/Basilica+of+Bom+Jesus/@15.5008938,73.9116272,15z/data=!4m2!3m1!1s0x0:0x1e8056689f15a7b8?sa=X&ved=2ahUKEwiPqKi62vn_AhVMAd4KHc2uAH0Q_BJ6BAhxEAA&hl=en&ved=2ahUKEwiPqKi62vn_AhVMAd4KHc2uAH0Q_BJ6BQiNARAI"
+                target="_blank">
+                <div class="box" id="box-8">
+                    <img src="../cities\church2.jpg" alt="" height=238.2px>
+                    <h3>Bom Jesus Basilica</h3>
+                    <p>Location: Old Goa Rd, Bainguinim, Goa</p>
+                    <p>Timings: 09:00 am to 06:30 pm (Mon-Sat); 10:30 am to 06:30 pm (Sun)</p>
+                    <p>Entry Fee: No entry fee</p>
+                </div>
+            </a>
+        </div>
+        <section class="footer">
+
+
+            <a name="About">
+                <h4>About Us</h4>
+            </a>
+            <p>Discover the hidden gems of India, plan your itinerary, and explore exciting activities that suit your preferences. 
+                Our goal is to empower you with the knowledge and resources to create unforgettable memories during your Indian sojourn.We are your go-to resource for exploring the diverse and enchanting destinations that India has to offer.
+            </p>            
+        </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank"> <i class="fab fa-instagram"></i></a>
+
+
+            </div>
+        </section>
+</body>
+
+</html>
