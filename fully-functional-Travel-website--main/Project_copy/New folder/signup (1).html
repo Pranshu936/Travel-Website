@@ -18,6 +18,7 @@
             flex-wrap: wrap;
             box-sizing: border-box;
             justify-content: center;
+            align-items: center;
             font-family: 'Roboto', sans-serif;
             padding-left: 90px;
             /* padding-top: 20px; */
@@ -35,11 +36,11 @@
             margin-left: 10%;
         }
 
-        .c1, .c2 {
+        .c1 {
             width: 50%;
             height: 700px;
             display: flex;
-            justify-content: flex-start;
+            justify-content:flex-start;
             position: relative;
             top: 5rem;
         }
@@ -177,11 +178,6 @@
             display: flex;
             box-sizing: border-box;
         }
-        
-        #logout{
-            font-size: 25px;
-            color: rgb(55, 132, 154);
-        }
 
         ::-webkit-input-placeholder {
             color: black;
@@ -272,28 +268,7 @@
                     
                 </form>
             
-        </div>
-        
-        <div class="c2">
-            <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
-                <div class="row">
-                    <h3 class = "container-head">Existing Users Login here!</h3>
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="email" id = "e">Email</label>
-                            <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password" id="p">Password</label>
-                            <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
-                        </div>
-                        <button type="button" id="login" name="login" class="btn btn-success">Login</button>
-                    </div><!-- end col -->
-                </div><!--  end row -->
-            </form>
-        </div>
-    </div>
-  
+        </div>  
 </body>
 
 <script type="module">
@@ -356,8 +331,10 @@
           // Signed in 
           const user = userCredential.user;
           console.log(user);
-          alert(user.email+" Login successfully!!!");
-          document.getElementById('logout').style.display = 'block';
+          window.location.href= '../index.html';
+          document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('logout').style.display = 'block';
+        });
           // ...
         })
         .catch((error) => {
@@ -375,7 +352,7 @@
             // Sign-out successful.
             console.log('Sign-out successful.');
             alert('Sign-out successful.');
-            document.getElementById('logout').style.display = 'none';
+            document.getElementById('logout').style.display = 'block';
           }).catch((error) => {
             // An error happened.
             console.log('An error happened.');
