@@ -10,6 +10,8 @@
     width: 100%;
     padding: 9px;
     background-color: black;
+    display: flex; 
+    justify-content: flex-start;
 }
 #navbar ul{
     display: grid;
@@ -23,7 +25,7 @@
     margin-top: 12px;
 
 }
-#navbar ul span{
+#navbar  span{
     margin: auto;
     font-family: 'Pacifico', cursive;
     font-size: 1.8rem;
@@ -41,7 +43,21 @@
     border-radius: 20px;
     color: #000000;
 }
-  
+
+#logout {
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    padding: 0px 36px ;
+    display: none;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#logout:hover {
+     background-color: #ffffff;
+    border-radius: 20px;
+    color: #000000;
+}
 
 
 #container1{
@@ -619,6 +635,87 @@ input{
         width: 2.4rem;
         position: relative;
         right: 35px;
+    }
+}
+
+footer{
+    background: #333333;
+    color: white;
+    position: relative;
+    top:116rem;
+    width: 100%;
+    margin:auto;
+}
+footer img{
+    width: 250px;
+    margin-top: 43px;
+}
+footer span{
+    margin-top: 25px;
+}
+footer h6{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+footer .col-3{
+    padding-left: 35px;
+}
+footer a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+footer a:hover{
+    color: #f5871f;
+}
+footer .fa-whatsapp{
+    margin-right: 5px;
+}
+.copyright{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    height: 45px;
+    background-color: #242424;
+    padding-top: 15px;
+}
+.footer-container{
+    display: flex;
+}
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    padding-left: 5px;
+}
+.social i {
+    color: #fff;
+    font-size: 17px;
+    margin-right: 15px;
+}
+@media only screen and (max-width: 600px) {
+    footer .col-3{
+     padding-left:0;
+ }
+ .footer-container{
+      flex-direction: column;
+  }
+  .footer-container .col-3{
+      width: 100% !important;
+  }
+  .copyright {
+        font-size: 11px;
     }
 }
 
